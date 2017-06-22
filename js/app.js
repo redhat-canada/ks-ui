@@ -63,8 +63,10 @@ function registerMember(memberData) {
     // Display the loader widget
     $.mobile.loading("show");
 
+    $.getScript('/js/env.js', function()
+    {
     $.ajax({
-        url: ' http://tm-orders:8080/rest/members',
+        url: ' http://'+env.hostname+'/rest/members',
         headers: {'X-Requested-With': 'XMLHttpRequest'},
         contentType: "application/json",
         dataType: "json",
@@ -98,5 +100,6 @@ function registerMember(memberData) {
             // Hide the loader widget
             $.mobile.loading("hide");
         }
+    });
     });
 }
