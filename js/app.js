@@ -30,7 +30,7 @@ function updateMemberTable() {
     $.mobile.loading("show");
 
     $.ajax({
-        url: " http://tm-orders-ks-msa-1.172.16.152.130.nip.io/rest/members",
+        url: " http://tm-orders:8080/rest/members",
         headers: {'X-Requested-With': 'XMLHttpRequest'},
         cache: false,
         success: function(data) {
@@ -61,7 +61,7 @@ function registerMember(memberData) {
     $.mobile.loading("show");
 
     $.ajax({
-        url: ' http://tm-orders-ks-msa-1.172.16.152.130.nip.io/rest/members',
+        url: ' http://tm-orders:8080/rest/members',
         headers: {'X-Requested-With': 'XMLHttpRequest'},
         contentType: "application/json",
         dataType: "json",

@@ -141,7 +141,7 @@
             <article id="register-art" data-role="page" data-title="Add a Member">
                 <!-- Header -->
                 <div data-role="header" class="header">
-                    <h3>HTML5 Quickstart</h3>
+                    <h3>Contact List</h3>
                 </div>
                 <!-- /Header -->
 
@@ -221,7 +221,6 @@
             <div data-role="footer" data-tap-toggle="false" data-position="fixed" data-theme="a">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#intro-art" data-icon="home" class="ui-btn-active">Home</a></li>
                         <li><a href="#register-art" data-icon="plus">Add a Member</a></li>
                         <li><a href="#member-art" data-icon="grid">List Members</a></li>
                     </ul>
@@ -237,7 +236,7 @@
             <td><%=member.name%></td>
             <td><a href="mailto:<%=member.email%>" class="ui-link"><%=member.email%></a></td>
             <td><a href="tel:<%=member.phoneNumber%>" class="ui-link">Call</a> or <a href="sms:<%=member.phoneNumber%>" class="ui-link">SMS</a> <%=member.phoneNumber%></td>
-            <td><a href="rest/members/<%=member.id%>" rel="external" target="_blank" class="resturl ui-link">JSON</a></td>
+            <td><a href="http://tm-orders:8080/rest/members/<%=member.id%>" rel="external" target="_blank" class="resturl ui-link">JSON</a></td>
         </tr>
         <% }); %>
     </script>
