@@ -31,6 +31,7 @@ function updateMemberTable() {
 
     $.ajax({
         url: " http://tm-orders-ks-msa-1.172.16.152.130.nip.io/rest/members",
+        headers: {'X-Requested-With': 'XMLHttpRequest'},
         cache: false,
         success: function(data) {
             $( "#members" ).empty().append(buildMemberRows(data));
@@ -61,6 +62,7 @@ function registerMember(memberData) {
 
     $.ajax({
         url: ' http://tm-orders-ks-msa-1.172.16.152.130.nip.io/rest/members',
+        headers: {'X-Requested-With': 'XMLHttpRequest'},
         contentType: "application/json",
         dataType: "json",
         type: "POST",
