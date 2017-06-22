@@ -28,7 +28,7 @@ function buildMemberRows(members) {
 function updateMemberTable() {
     // Display the loader widget
     $.mobile.loading("show");
-    $.getScript('env.js', function()
+    $.getScript('/js/env.js', function()
     {
     $.ajax({
         url: " http://"+env.hostname+"/rest/members",
