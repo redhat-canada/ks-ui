@@ -28,9 +28,10 @@ function buildMemberRows(members) {
 function updateMemberTable() {
     // Display the loader widget
     $.mobile.loading("show");
-
+    $.getScript('env.js', function()
+    {
     $.ajax({
-        url: " http://tm-orders:8080/rest/members",
+        url: " http://"+env.hostname+"/rest/members",
         headers: {'X-Requested-With': 'XMLHttpRequest'},
         cache: false,
         success: function(data) {
@@ -45,6 +46,8 @@ function updateMemberTable() {
             $.mobile.loading("hide");
         }
     });
+});
+
 }
 
 /*
