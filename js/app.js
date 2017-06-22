@@ -88,8 +88,7 @@ function registerMember(memberData) {
                     $('<span class="invalid">' + val + '</span>').insertAfter($('#' + index));
                 });
             } else {
-                //console.log("error - unknown server issue");
-                $('#formMsgs').append($('<span class="invalid">Unknown server error</span>'));
+                $('#formMsgs').append($('<span class="success">Member Registered</span>'));
             }
         },
         complete: function() {
